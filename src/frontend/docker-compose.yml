@@ -1,0 +1,12 @@
+version: '3.9'
+name: exercise_M06W03
+
+services: 
+  frontend: 
+    build: 
+      context: .
+    ports: 
+      - "3000:8501"
+    volumes:
+      - .:/usr/local/app  # Bind mount mã nguồn
+    command: ["streamlit", "run", "app.py", "--server.port=8501", "--server.enableCORS=false"]

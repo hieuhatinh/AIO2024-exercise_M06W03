@@ -45,7 +45,7 @@ def load_model(model_path):
 
 # load model
 model_path = absolute_path = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '../../weights/hourly_temperature_forecasting.pt'))
+    os.path.dirname(__file__), '../weights/hourly_temperature_forecasting.pt'))
 model = load_model(model_path)
 
 
