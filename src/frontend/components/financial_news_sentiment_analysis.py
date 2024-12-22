@@ -50,7 +50,7 @@ class SentimentClassifier(nn.Module):
 
 # Load vocab
 vocab_path = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '../../weights/vocabulary.pkl'))
+    os.path.dirname(__file__), '../weights/vocabulary.pkl'))
 with open(vocab_path, 'rb') as f:
     vocab_list = pickle.load(f)
     vocab = {word: idx for idx, word in enumerate(vocab_list)}
@@ -81,7 +81,7 @@ def load_model(model_path):
 
 
 model_path = absolute_path = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '../../weights/sentiment_analysis_model.pt'))
+    os.path.dirname(__file__), '../weights/sentiment_analysis_model.pt'))
 model = load_model(model_path)
 
 tokenizer = get_tokenizer('basic_english')
